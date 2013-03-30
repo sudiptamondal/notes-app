@@ -55,3 +55,6 @@ ul#us a:focus:after
     display: block;
     text-shadow: 1px 1px 1px #fff;
 }
+p {
+	word-break: break-all;
+}
