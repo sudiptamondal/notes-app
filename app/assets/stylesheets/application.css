@@ -33,6 +33,7 @@ ul#us a:hover, ul#us a:focus
     -moz-box-shadow: 3px 3px 5px #000;
     -webkit-box-shadow: 3px 3px 5px #000;
     box-shadow: 3px 3px 5px #000;
+    border-radius: 10px;
 }
 ul#us a:hover img, ul#us a:focus img { outline: 3px solid #ccc; }
 
