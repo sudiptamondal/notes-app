@@ -1,0 +1,49 @@
+body {
+    background-color: #f1f1f1;
+}
+ul#us { overflow: hidden; padding: 5px; }
+ul#us > li {
+    position: relative;
+    float: left;
+    list-style: none;
+    margin: 0 20px 20px 0;
+    font-size: 10px;
+}
+ul#us a { text-decoration: none; display: block; }
+
+ul#us li img { display: block; position: relative; z-index: -1; } /* IE8 fix, background colour appears behind img for uknown reason set negative z-index */
+ul#us li:not([class=na]) img { position: static; } /* Reset relative position, as this plays havoc with good browsers */
+
+ul#us a:hover, ul#us a:focus
+{
+    display: block;
+    outline: none;
+    -moz-box-shadow: 3px 3px 5px #000;
+    -webkit-box-shadow: 3px 3px 5px #000;
+    box-shadow: 3px 3px 5px #000;
+    border-radius: 10px;
+}
+ul#us a:hover img, ul#us a:focus img { outline: 3px solid #ccc; }
+
+ul#us a:hover:after,
+ul#us a:focus:after
+{
+    content: attr(title);
+    color: #000;
+    position: absolute;
+    bottom: 0;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    background: rgb(255,255,255);
+    background: rgba(255,255,255,0.7);
+    background: -moz-linear-gradient(top, rgba(255,255,255,0.7), rgba(204,204,204,0.7)); /* Firefox 3.6+ */
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255,0.7)), to(rgba(204,204,204,0.7))); /* Safari */
+    display: block;
+    text-shadow: 1px 1px 1px #fff;
+}
+p {
+	word-break: break-all;
+}
