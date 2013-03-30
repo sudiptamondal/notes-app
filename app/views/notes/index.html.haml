@@ -29,15 +29,15 @@
       .pull-left{:style=>"margin-left:20px;width:450px;"}
         .pull-left{:style=>"width:100%"}
           %h5.pull-left{:style=>"margin-left:10px;"}="WHY: #{note.note_text_why }"
-          %h4.pull-right=note.task_priority
-          %p.pull-left{:style=>"margin-left:10px;"}
-            - user = ""
-            - if note.user_id == 1
-              - user = "Ara" 
-            - if note.user_id == 2
-              - user = "Shuiab"
-            - if note.user_id == 3
-              - user = "Sudi"
-            ="#{note.note_text_what unless note.note_text_what.blank?} - #{user}"
+          %h4.pull-right="Task Priority: #{note.task_priority}"
+        %p.pull-left{:style=>"margin-left:10px;"}
+          - user = ""
+          - if note.user_id == 1
+            - user = "Ara" 
+          - if note.user_id == 2
+            - user = "Shuiab"
+          - if note.user_id == 3
+            - user = "Sudi"
+          ="#{note.note_text_what unless note.note_text_what.blank?} - #{user}"
 
 = render :partial => "new_note"
