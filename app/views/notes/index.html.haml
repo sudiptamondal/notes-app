@@ -1,0 +1,26 @@
+.pull-left{:style=>"width:100%"}
+	%h3.pull-left="Knock Knock - Who's there?"
+	%ul#us.pull-left.unstyled{:style=>"padding:5px"}
+		%li#ara.pull-left{:style=>"width:150px;margin-left:20px;margin-right:20px"}
+			%a{:href=>"#", :title=>"This is me"}
+				= image_tag "/ara.jpg", :style=>"width:100%;height:100%;", :class=>"pull-left"
+		%li#shuiab.pull-left{:style=>"width:150px;margin-left:20px;margin-right:20px"}
+			%a{:href=>"#", :title=>"This is me"}
+				= image_tag "/shuiab.jpg", :style=>"width:100%;height:100%;", :class=>"pull-left"
+		%li#me.pull-left{:style=>"width:150px;margin-left:20px;margin-right:20px"}
+			%a{:href=>"#", :title=>"This is me"}
+				= image_tag "/me.jpg", :style=>"width:100%;height:100%;", :class=>"pull-left"
+	%ul#notUs.pull-left.unstyled{:style=>"padding:5px"}
+		%li.pull-left{:style=>"width:150px;margin-left:20px;margin-right:20px"}
+			%a.btn.pull-left{:href=>"#newNote", :role=>"button", "data-toggle"=>"modal", :style=>"width:150px;height:150px;padding:0;"}
+				%p.pull-left{:style=>"width:100%;margin-top:55px;"}="New Note"
+
+%ul#notes_container.pull-left{:style=>"width:600px;"}
+	- @notes.each do |note|
+		%li
+			- unless note.note_text_why.blank?
+				%h5="WHY: #{note.note_text_why }"
+			
+			%p="#{note.note_text_what unless note.note_text_what.blank?} - #{note.user_id unless note.user_id.blank?}"
+
+= render :partial => "new_note"

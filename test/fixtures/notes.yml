@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  note_text_why: MyText
+  user_id: 1
+  note_text_what: MyText
+  task_priority: 1
+
+two:
+  note_text_why: MyText
+  user_id: 1
+  note_text_what: MyText
+  task_priority: 1

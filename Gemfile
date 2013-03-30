@@ -7,11 +7,9 @@ gem 'rails', '3.2.13'
 
 gem 'sqlite3'
 gem 'haml'
-gem 'twitter-bootstrap'
 gem 'turbolinks'
 gem 'haml-rails'
-gem 'twitter-bootstrap'
-
+gem 'active_admin'
 
 # Gems used only for assets and not required
 # in production environments by default.

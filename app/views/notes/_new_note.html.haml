@@ -1,0 +1,22 @@
+.modal.fade.hide#newNote{:tabindex=>"-1", :role=>"dialog", "aria-labelledby"=>"myModalLabel", "aria-hidden"=>"true"}
+  .modal-header
+    -#%button.close{:type=>"button", :class=>"", "data-dismiss"=>"modal", "aria-hidden"=>"true"}="&times;".html_safe
+    %h3="New Note"
+  .modal-body
+    = form_for :note, :url=>"/notes/create", :remote => "true", :html=> {:class=>"pull-left", :style=>"width:100%"} do |f|
+      = f.hidden_field :user_id
+      .control-group
+        %label.control-label.pull-left{:for=>"note_text_why", :style=>"margin-right:20px;line-height:30px;"}='What'
+        .controls
+          = f.text_field :note_text_why, :style=>"width:460px;"
+      .control-group
+        %label.control-label.pull-left{:for=>"task_priority", :style=>'margin-right:20px;line-height:30px;'}='Priority'
+        .controls
+          = select_tag :task_priority, options_for_select([1,2,3]), :name=>'note[task_priority]'
+      .control-group
+        %label.control-label.pull-left{:for=>"note_text_why", :style=>'margin-right:20px;line-height:30px;'}='Why'
+        .controls
+          = f.text_area :note_text_what, :style=>"max-width:460px;min-width:460px;width:460px;", :rows=>"0", :cols=>"0"
+      = f.submit "Save changes", :class=>"btn btn-primary pull-right"
+  .modal-footer{:style=>"text-align:center"}
+    %button.btn#cancel{:style=>"width:200px;"}="Cancel"
