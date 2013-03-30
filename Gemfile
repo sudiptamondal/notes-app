@@ -9,7 +9,7 @@ gem 'sqlite3'
 gem 'haml'
 gem 'turbolinks'
 gem 'haml-rails'
-gem 'active_admin'
+#gem 'activeadmin'
 
 # Gems used only for assets and not required
 # in production environments by default.
