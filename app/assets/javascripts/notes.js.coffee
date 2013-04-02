@@ -4,9 +4,9 @@
 
 $ ->
 	$(document).on 'click','a[href=#newNote]', ->
-		$("#newNote").removeClass("fade").removeClass("hide")
+		$("#newNote").modal('show')
 	$(document).on 'click','#cancel', ->
-		$("#newNote").addClass("fade").addClass("hide")
+		$("#newNote").modal('hide')
 	$(document).on 'click','#ara', ->	
 		$("#note_user_id").val('1')	
 	$(document).on 'click','#shuiab', ->
