@@ -9,9 +9,9 @@ gem 'turbolinks'
 gem 'haml-rails'
 gem 'activeadmin'
 gem 'pg'
-gem 'jquery-rails'
 
 group :development do 
+	gem 'jquery-rails'
   gem 'therubyracer', :platforms => :ruby
 end
 
