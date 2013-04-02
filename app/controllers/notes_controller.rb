@@ -1,6 +1,6 @@
 class NotesController < ApplicationController
   def index
-  	@notes = Notes.all
+  	@notes = Notes.order("created_at desc")
   end
   def create
   	@note = Notes.create(params[:note])
